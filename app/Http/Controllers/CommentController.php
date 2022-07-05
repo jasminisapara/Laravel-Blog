@@ -34,7 +34,6 @@ class CommentController extends Controller
                     'comment_body'=> $request->comment_body,
                 ]);
             return redirect()->back()->with('message','Commented Successfully');
-
             } 
             else{
             return redirect()->back()->with('message','No Such Post Found');
@@ -42,7 +41,7 @@ class CommentController extends Controller
             }
         }
         else{
-            return redirect('login')->with('message','You Can Add Comment Plzz Login First!!');
+            return redirect('login')->with('message','You Can Add Comment Please Login First!!');
         }
     }
 
@@ -59,7 +58,7 @@ class CommentController extends Controller
                 $comment->delete();  
                 return response()->json([
                     'status'=> 200,
-                    'message' => 'Comment Deleted Succesfully'
+                    'message' => 'Comment Deleted Successfully'
                 ]);
             }
             else{

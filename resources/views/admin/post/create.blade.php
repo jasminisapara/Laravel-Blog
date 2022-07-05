@@ -23,6 +23,7 @@
         <div class="card-body">
             <form action="{{ url('admin/add-post') }}" method="POST">
                 @csrf
+                {{-- <input type="hidden" name="csrf-token" value="{{csrf_token()}}"> --}}
                 <div class="row">
                 <div class="mb-3 col-md-6">
                     <label for="">Category</label>
